@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+  background: #07142C;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 10px;
+}
+
+.logo-container {
+  margin: 0 auto 2em 1.6em;
+  padding: 3.5em 1em;
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  width: 8em;
+}
+
+.switches {
+  background: transparent;
+  width: 6em;
+  height: 2.5em;
+  margin-top: 2.5em;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.toggle {
+  border-radius: 50px;
+  width: 2.6em;
+  height: 100%;
+  background: white;
+  position: absolute;
+  right: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.switches-active {
+  border: 2px solid black;
+}
+
+.active {
+  right: 51%;
+  background: black;
+}
+
+.bg {
+  background: white;
+  color: black;
+}
+
+.categories {
+  width: 95vw;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 5em;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.jokes, .motivation {
+  border: 2px solid white;
+  position: relative;
+  border-radius: 34px;
+  width: 30em;
+  overflow: hidden;
+}
+
+.active-border {
+  border: 2px solid black;
+}
+
+.funny-face {
+  background: #dcd735;
+}
+
+.funny-face, .journal {
+  width: 100%;
+}
+
+.description {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em .8em;
+  font-size: 1.8rem;
+  width: 15em;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 1.5em 0 1.2em 40%;
+  padding: .9em 1.9em;
+  border-radius: 10px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #c3e7eb;
+  top: 0;
+  right: -100%;
+  z-index: -1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.btn:hover::after {
+  right: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+@media (min-width: 800px) {
+  .card {
+    width: 30em;
+    height: 37em;
+  }
+  .logo-container {
+    width: 50vw;
+    margin: 0 auto;
+  }
+  .categories {
+    width: 65vw;
+    margin: auto;
+    gap: 5em;
+  }
+  .btn {
+    margin-left: 35%;
+  }
+}
+/*# sourceMappingURL=home.css.map */
